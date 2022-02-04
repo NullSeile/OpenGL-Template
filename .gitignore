@@ -1,6 +1,6 @@
 # Directories
-./bin/
-./bin-int/
+**bin/
+**bin-int/
 
 # Files
 *.user
@@ -12,3 +12,4 @@
 *.vcxproj.filters
 *.vcxproj.user
 *.png
+.vscode/

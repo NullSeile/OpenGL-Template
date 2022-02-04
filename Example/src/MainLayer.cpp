@@ -1,15 +1,15 @@
-#include "ExampleLayer.h"
+#include "MainLayer.h"
 
 using namespace GLCore;
 using namespace GLCore::Utils;
 
-void ExampleLayer::OnUpdate(Timestep ts)
+void MainLayer::OnUpdate(Timestep ts)
 {
 	glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 }
 
-void ExampleLayer::OnEvent(Event& event)
+void MainLayer::OnEvent(Event& event)
 {
 	EventDispatcher dispatcher(event);
 	dispatcher.Dispatch<MouseButtonPressedEvent>(
@@ -26,7 +26,7 @@ void ExampleLayer::OnEvent(Event& event)
 		});
 }
 
-void ExampleLayer::OnImGuiRender()
+void MainLayer::OnImGuiRender()
 {
 	ImGui::Begin("Controls");
     static float val = 0;
