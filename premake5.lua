@@ -1,7 +1,6 @@
--- FractalVisualizer
-workspace "FractalVisualizer"
+workspace "OpenGL-Template"
 	architecture "x64"
-	startproject "FractalVisualizer"
+	startproject "OpenGL-Template"
 
 	configurations {
 		"Debug",
@@ -14,14 +13,6 @@ workspace "FractalVisualizer"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
--- Include directories relative to OpenGL-Core
-IncludeDir = {}
-IncludeDir["GLFW"] = "vendor/GLFW/include"
-IncludeDir["Glad"] = "vendor/Glad/include"
-IncludeDir["ImGui"] = "vendor/imgui"
-IncludeDir["glm"] = "vendor/glm"
-IncludeDir["stb"] = "vendor/stb"
-
 -- Projects
 group "Dependencies"
 	include "OpenGL-Core/vendor/GLFW"
@@ -30,4 +21,4 @@ group "Dependencies"
 group ""
 
 include "OpenGL-Core"
-include "FractalVisualizer"
+include "Example"
